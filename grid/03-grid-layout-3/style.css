@@ -5,6 +5,10 @@
 
 .container {
   text-align: center;
+  /* my solution */
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
 }
 
 .container div {
@@ -17,24 +21,38 @@
 
 .header {
   background-color: #393f4d;
+  /* my solution */
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 .logo {
+  justify-self: start;
 }
 
 .menu {
+  align-self: center;
 }
 
 .menu ul {
+  /* my solution */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  list-style-type: none;
 }
 
 .sidebar {
   background-color: #FF7755;
+  /* my solution */
+  grid-row: 2 / 4;
+  display: grid;
+  gap: 50px;
 }
 
 .sidebar .photo {
@@ -46,6 +64,9 @@
 }
 
 .photo  {
+  /* my solution */
+  display: grid;
+  align-items: center;
 }
 
 .sidebar .side-content {
@@ -53,22 +74,38 @@
   color: black;
   font-size: 16px;
   font-weight: normal;
+  /* my solution */
+  display: grid;
+  align-items: center;
 }
 
 .nav {
   background-color: #FF7755;
+  /* my solution */
+  grid-column: 2 / -1;
+  display: grid;
 }
 
 .nav ul {
+  /* my solution */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
+  list-style-type: none;
 }
 
 .article {
   background-color: #bccbde;
+  /* my solution */
+  grid-column: 2 /-1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
 }
 
 .article p {
@@ -82,12 +119,16 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+  /* my solution */
+  height: 200px;
 }
 
 .card p {
   color: black;
   font-weight: normal;
   font-size: 14px;
+  /* my solution */
+  padding: 5px;
 }
 
 .card .title {
@@ -97,9 +138,11 @@
 
 .footer {
   background-color: #393f4d;
+  /*my solution */
+  grid-column: 1 / -1;
 }
 
 .footer p {
   font-size: 13px;
-  font-weight: normal;  
+  font-weight: normal;
 }
